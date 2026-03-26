@@ -1,0 +1,59 @@
+# .NET 构建输出
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET
+wwwroot/
+AppData/
+
+# Node.js / UniApp 前端
+node_modules/
+dist/
+.output/
+unpackage/
+**/node_modules/**
+*.log
+.env.local
+.cache/
+.DS_Store
+
+# 前端构建输出
+frontend/dist/
+frontend/unpackage/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# 密钥 / 配置 (不提交敏感配置)
+appsettings.Production.json
+appsettings.Staging.json
+*.pfx
+*.p12
+
+# 日志
+logs/
+*.log
