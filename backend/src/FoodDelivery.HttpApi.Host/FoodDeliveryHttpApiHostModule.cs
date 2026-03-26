@@ -39,6 +39,8 @@ public class FoodDeliveryHttpApiHostModule : AbpModule
                 options.Audience = "FoodDelivery";
             });
 
+        context.Services.AddSignalR();
+
         context.Services.AddAbpSwaggerGenWithOAuth(
             configuration["AuthServer:Authority"]!,
             new Dictionary<string, string> { { "FoodDelivery", "FoodDelivery API" } },
@@ -69,6 +71,9 @@ public class FoodDeliveryHttpApiHostModule : AbpModule
         });
         app.UseAuditing();
         app.UseAbpSerilogEnrichers();
-        app.UseConfiguredEndpoints();
+        app.UseConfiguredEndpoints(endpoints =>
+        {
+            endpoints.MapHub<FoodDelivery.Hubs.OrderHub>("/hubs/order");
+        });
     }
 }
