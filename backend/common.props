@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>net8.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Authors>FoodDelivery</Authors>
+    <Company>FoodDelivery</Company>
+  </PropertyGroup>
+</Project>
